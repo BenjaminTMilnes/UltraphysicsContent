@@ -1,0 +1,132 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{hyperref}
+
+\newcommand{\gevcc}{\frac{\mathrm{GeV}}{c^2}}
+\newcommand{\evcc}{\frac{\mathrm{eV}}{c^2}}
+\newcommand{\nue}{\nu_{e}}
+\newcommand{\numu}{\nu_{\mu}}
+\newcommand{\nutau}{\nu_{\tau}}
+\newcommand{\suh}{\uparrow {\left(\frac{1}{2}\right)}}
+\newcommand{\sdh}{\downarrow {\left(-\frac{1}{2}\right)}}
+\newcommand{\wboson}{W^{\pm}}
+\newcommand{\zboson}{Z^0}
+\newcommand{\wminus}{W^-}
+\newcommand{\wplus}{W^+}
+\newcommand{\ttt}[1]{\times 10^{#1}}
+\newcommand{\units}[1]{\mathrm{ #1}}
+
+\title{Introduction to Particle Physics}
+\begin{document}
+
+\part*{Lecture 5}
+
+\section*{The Four Fundamental Forces}
+
+We know of only four fundamental forces or interactions. Each has its own force-carrying boson, an intermediate boson or a gauge boson. Each has its own strength and properties.
+
+\vspace*{20pt}
+
+\begin{tabular}{c|ccc}
+Name of Force & Relative Strength & Range & Name of Particle \\
+\hline
+Strong & $1$ & $10^{-15} \mathrm{m}$ & gluon, $g$ \\
+Electromagnetic & $\frac{1}{137}$ & $\infty, \frac{1}{r^2}$ & photon, $\gamma$ \\
+Weak (Charged) & $10^{-9}$ & $10^{-18} \mathrm{m}$ & $W^+, W^-$ \\
+Weak (Neutral) & $10^{-9}$ & $10^{-18} \mathrm{m}$ & $Z^0$ \\
+Gravity & $10^{-38}$ & $\infty, \frac{1}{r^2}$ & graviton, $G$
+\end{tabular}
+
+\vspace*{20pt}
+The gauge bosons have surprisingly different properties to each other.
+
+\vspace*{20pt}
+\begin{tabular}{c|cccc}
+Particle & Mass & Charge & Spin & Other Properties \\
+\hline
+Gluons ($\times 8$) & 0 & 0 & 1 & colour / anti-colour \\
+Photons & 0 & 0 & 1 & - \\
+$W^{\pm}$ & $80.4 \gevcc$ & $\pm 1$ & 1 & weak isospin \\
+$Z^0$ & $91.2 \gevcc$ & 0 & 1 & weak isospin \\
+Gravitons & 0 & 0 & 2 & -
+\end{tabular}
+
+\vspace*{20pt}
+\subsection*{Virtual Particles and Energy-Momentum Conservation}
+
+The existence of massive gauge bosons ($\wboson, \zboson$) as force mediators poses a potential problem. Feynmann Diagram for $\beta$-decay:
+
+[Image here]
+
+But how come the $\wminus$, which weighs as much as about $80$ protons, be emitted from a single $d$ quark (or neutron). The amazing answer is that the $\wboson$ \textbf{does not need to} satisfy the famous equation:
+
+\begin{align*}
+E (= m(u) c^2) = \sqrt{p^2 c^2 + m_0^2 c^4}
+\end{align*}
+
+where $m(u)$ is the relativistic mass of the $\wboson$, and $m_0$ is the rest mass of the $\wboson$. It violates the energy-momentum conservation temporarily. It is allowed because of Heisenberg's Uncertainty Principle, which states that energy, $E$, can be uncertain by an amount $\Delta E$, over a very short time period, $\Delta t$. In other words, the $\wboson$ can exist for a time provided that:
+
+\begin{align*}
+\Delta E \Delta t &= \hbar \\
+&\approx 1.05 \times 10^{-34} \mathrm{ Js} \\
+&\approx 6.6 \times 10^{-25} \mathrm{ GeVs}
+\end{align*}
+
+Making an $80 \gevcc \wboson$ from almost nothing can be allowed for a time:
+
+\begin{align*}
+\Delta t &\approx \frac{6.6 \times 10^{-25}}{80} \mathrm{ s} \\
+&\approx 8.2 \times 10^{-25} \mathrm{ s}
+\end{align*}
+
+How far can it travel? For a distance $c\Delta t$:
+
+\begin{align*}
+c\Delta t &= 8.2 \ttt{-27} \times 3 \ttt{8} \mathrm{ m} \\
+&\approx 2.5 \ttt{-18} \units{m}
+\end{align*}
+
+This is the typical range of the weak force.
+
+\subsection*{Gluons and the Strong Interaction}
+
+The strong interaction is responsible for binding quarks into hadrons. Gluons carry colour and anticolour but never flavour or charge. Hence flavour and charge are always conserved in the strong interaction.
+
+There are 8 varieties of gluons:
+
+\begin{align*}
+r \bar{b}, r \bar{g}, b \bar{r}, b \bar{g}, g \bar{r}, g \bar{b}, \frac{r \bar{r} - b \bar{b}}{\sqrt{2}}, \frac{r \bar{r} + b \bar{b} - 2 g \bar{g}}{\sqrt{2}}
+\end{align*}
+
+If a red quark emits an $r\bar{b}$ gluon, it becomes a blue quark. So colour is continuously passed between quarks.
+
+[Image here]
+
+Colour is always conserved at vertices and overall. Only happens inside a hadron so that the total colour for all hadrons
+
+The gluon is massless, which would suggest that the range of the strong force is infinite.
+
+\begin{align*}
+\Delta E \Delta t &= \hbar \\
+\rightarrow \Delta t &= \frac{\hbar}{0} \rightarrow \infty
+\end{align*}
+
+But the range is actually limited by confinement to $\approx 10^{-14} \units{m}$
+
+\textbf{N. B.} Since gluons themselves carry colour, they can interact among themselves, e.g.:
+
+[Image here]
+
+So that they feel the strong force themselves.
+
+\subsection*{The strong interaction between hadrons}
+
+We've said that protons are bound together with neutrons inside nuclei by the strong interaction. But we've also said that the strong interaction restricts gluons and that gluons are confined inside hadrons. How can the strong interaction by mediated between protons and neutrons (and indeed other pairs of hadrons). The answer is that it is mediated by the exchange of pions (which are colourless non-elementary bosons).
+
+
+\end{document}
