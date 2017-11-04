@@ -1,0 +1,90 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{hyperref}
+
+\title{Waves}
+\begin{document}
+
+\part*{Lecture 2}
+
+Consider a right-travelling transverse wave:
+
+\vspace*{10pt}
+[Image]
+\vspace*{10pt}
+
+A particle on the string only has transverse velocity. So $\frac{\mathrm{d}y}{\mathrm{d}t}$ is not the speed of the wave. The same is true for longitudinal waves such as sound; the movement of the air molecules is vibrational.
+
+\subsection*{Phase and Phase Difference}
+
+\begin{align*}
+u(t) = A \cos(kx - \omega t + \eta)
+\end{align*}
+
+where $\eta$ is the \textbf{phase of the wave}. $\eta$ is important for the superposition of waves, which leads to interference effects.
+
+\vspace*{10pt}
+[Image]
+\vspace*{10pt}
+
+\subsection*{Principle of Superposition}
+
+\subsubsection*{Waves of the same frequency}
+
+\begin{align*}
+u_1 &= A_1 \cos(kx - \omega t) \\
+u_2 &= A_2 \cos(kx - \omega t + \eta)
+\end{align*}
+
+Using the following trigonometric identity:
+
+\begin{align*}
+\cos(A) + \cos(B) = 2 \cos\left(\frac{A+B}{2}\right) \cos\left(\frac{A-B}{2}\right)
+\end{align*}
+
+If $\eta = 0$, $u_{total} = 2 u_1$ $\leftarrow$ \textbf{constructive interference}
+
+If $\eta = \pi$, $u_{total} = 0$ $\leftarrow$ \textbf{destructive interference}
+
+\subsubsection*{Waves of a similar frequency}
+
+\begin{align*}
+\text{Wave } & A \quad\quad k_1 = k + \Delta k \quad\quad \omega_1 = \omega + \Delta \omega \\
+& B \quad\quad k_2 = k - \Delta k \quad\quad \omega_2 = \omega - \Delta \omega
+\end{align*}
+
+From this, we get:
+
+\begin{align*}
+u = 2 \cos(\Delta k x + \Delta \omega t) \cos(kx + \omega t)
+\end{align*}
+
+The first cosine in the above equation represents the `beat wave', and the second represents the `actual' wave.
+
+Pianos have three strings per note, which are tuned to slightly different frequencies. Overall, when a note is played, we hear a note of frequency $\omega$ (an average of the different waves' frequencies), and a beat frequency $\Delta \omega$. If a piano had only two strings per note, and they were tuned to $254 \mathrm{Hz}$ and $258 \mathrm{Hz}$, we would hear a note at $256 \mathrm{Hz}$
+
+\begin{align*}
+\text{beat frequency } = 2 \Delta \omega
+\end{align*}
+
+\subsection*{Group Velocity}
+
+There are two components to the total wave, with different speeds:
+
+\begin{align*}
+\text{the wave } \quad & v = \frac{\omega}{k} \\
+\text{the beat wave } \quad & v = \frac{\Delta \omega}{\Delta k}
+\end{align*}
+
+As $\Delta \rightarrow 0$,
+
+\begin{align*}
+& v_g = \frac{\partial \omega}{\partial k}
+\end{align*}
+
+\end{document}
