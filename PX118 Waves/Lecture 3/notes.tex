@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{hyperref}
+
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\dif}[2]{\frac{\rmd #1}{\rmd #2}}
+\newcommand{\difn}[3]{\frac{\rmd^{#3} #1}{\rmd #2^{#3}}}
+
+\title{Waves}
+\begin{document}
+
+\part*{Lecture 3}
+
+\subsubsection*{Dispersion}
+
+A typical wave:
+
+\begin{align*}
+u(x, t) = A \cos(kx - \omega t)
+\end{align*}
+
+Normally for waves in real media there will be a specific relationship between $\omega$ and $k$
+
+\begin{align*}
+\omega = f(k)
+\end{align*}
+
+This is known as the \textbf{dispersion relation}.
+
+\paragraph*{Example: Sound Waves}
+
+\begin{align*}
+\omega = k \sqrt{\frac{B}{\rho}}
+\end{align*}
+
+where $B$ is the bulk modulus of air, and $\rho$ is the density of the air. So,
+
+\begin{align*}
+v = \frac{\omega}{k} = \sqrt{\frac{B}{\rho}}
+\end{align*}
+
+$\rightarrow \quad$ $v$ is independent of $\omega$ and $k$
+
+$\rightarrow \quad \omega \propto k$
+
+\vspace*{10pt}
+
+The group velocity:
+
+\begin{align*}
+\frac{\partial \omega}{\partial k} &= \sqrt{\frac{B}{\rho}} \\
+\text{i.e.} \quad v &= v_g
+\end{align*}
+
+Sound waves are therefore \textbf{non-dispersive}.
+
+\paragraph*{Example: Deep Water Waves}
+
+\begin{align*}
+\omega &= \text{const.} \times \sqrt{gk} \\
+v &= \text{const.} \times \sqrt{\frac{g}{k}}
+\end{align*}
+
+Therefore deep water waves \textbf{are dispersive}, as $v$ depends on $k$.
+
+\begin{align*}
+v_g &= \frac{\partial \omega}{\partial k} = \frac{\text{const.}}{2} \sqrt{\frac{g}{k}} = \frac{v}{2} \\
+v_g &\neq v
+\end{align*}
+
+\subsubsection*{Brief comments about light}
+
+We tend to think of light as travelling at $c$ ($3 \times 10^8 \mathrm{ms^{-1}}$). This is only really true in a vacuum, where:
+
+\begin{align*}
+\omega = ck \quad \text{non-dispersive}
+\end{align*}
+
+In most media the speed of light is less than $c$. For example, in glass:
+
+\begin{align*}
+v \approx \frac{2}{3} c
+\end{align*}
+
+A slightly odd example: electromagnetic waves in Earth's ionosphere:
+
+\begin{align*}
+\text{dispersion relation:} \quad \omega^2 = c^2 k^2 + \omega_p^2
+\end{align*}
+
+where $\omega_p$ is a constant - the frequency of natural circular oscillation of electrons in the ionosphere. So,
+
+\begin{align*}
+v &= \sqrt{c^2 + \frac{\omega_p^2}{k^2}} \\
+v_g &= \frac{c^2 k}{\sqrt{c^2 k^2 + \omega_p^2}}
+\end{align*}
+
+Note that the velocity of the light waves is actually \textit{faster} than the speed of light, but that the group velocity is \textit{slower} than the speed of light, and it is the group velocity that matters here.
+
+\vspace*{10pt}
+[Image]
+\vspace*{10pt}
+
+The energy travels at $v_g$, and it is always the case that $v_g < c$.
+
+\section*{The Wave Equation}
+
+Take a general form for a travelling wave:
+
+\begin{align*}
+y(x, t) &= f(x - vt) \\
+&= f(g(x, t))
+\end{align*}
+
+We're heading for a second order differential equation. Differentiation using the chain rule:
+
+\begin{align*}
+\dif{y}{x} &= \dif{f}{g} \dif{g}{x} \\
+&= \dif{f}{g} \times 1 \\
+\\
+\dif{y}{t} &= \dif{f}{g} \times \dif{g}{t} \\
+&= \dif{f}{g} \times -v \\
+&= -v \dif{y}{x}
+\end{align*}
+
+Note, for a left-travelling wave:
+
+\begin{align*}
+\dif{y}{t} = + v \dif{y}{x}
+\end{align*}
+
+\begin{align*}
+\difn{f(g)}{x}{2} = \difn{f}{g}{2} \times \left( \dif{g}{x} \right) ^2 + \dif{f}{g} \times \difn{g}{x}{2}
+\end{align*}
+
+We find that:
+
+\begin{align*}
+\difn{y}{x}{2} = \difn{f}{g}{2} \\
+\difn{y}{t}{2} = v^2 \difn{f}{g}{2} \\
+\\
+\difn{y}{t}{2} = v^2 \difn{y}{x}{2}
+\end{align*}
+
+This is the Wave Equation.
+
+
+\end{document}
