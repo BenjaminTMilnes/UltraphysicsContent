@@ -1,0 +1,130 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{hyperref}
+
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\dif}[2]{\frac{\rmd #1}{\rmd #2}}
+\newcommand{\difn}[3]{\frac{\rmd^{#3} #1}{\rmd #2^{#3}}}
+
+\title{Waves}
+\begin{document}
+
+\part*{Lecture 4}
+
+\subsubsection*{Comments on the wave equation}
+
+\begin{itemize}
+\item It's a one-dimensional wave equation.
+\item It applies to left and right travelling waves.
+\item It also applies to standing waves.
+\end{itemize}
+
+So,
+
+\begin{align*}
+y(x, t) = A e^{i(kx-\omega t)}
+\end{align*}
+
+This is a solution to the wave equation, and we find that:
+
+\begin{align*}
+v^{2} &= \frac{\omega^{2}}{k^{2}} \\
+v &= \frac{\omega}{k}
+\end{align*}
+
+For light:
+
+\begin{align*}
+\difn{E}{x}{2} = \mu_{0} \epsilon_{0} \difn{E}{t}{2}
+\end{align*}
+
+where $E$ is the electric field, $\mu_{0}$ is the permeability of free space, and $\epsilon_{0}$ is the permittivity of free space.
+
+\begin{align*}
+v = \frac{1}{\sqrt{\mu_{0}\epsilon_{0}}}
+\end{align*}
+
+\section*{Examples of mechanical waves}
+
+\subsection*{Waves on a taut string}
+
+[Image]
+
+Consider a transverse wave travelling left to right along a taut string. The individual particles of the string only move along the $y$ axis and not along the $x$ axis.
+
+Consider a small element of the string.
+
+[Image]
+
+Tension in the string means that the forces are acting along the string itself.
+
+\begin{align*}
+F_{1, x} &= F_{2, x} = T \\
+F_{1, y} &= F_{1, x} \tan \theta_{1} = F_{1, x} \dif{y}{x} \left[ x_{1} \right] \\
+F_{2, y} &= F_{2, x} \tan \theta_{2} = F_{2, x} \dif{y}{x} \left[ x_{1} + \Delta x \right]
+\end{align*}
+
+There is a net upward force.
+
+\begin{align*}
+F_{y} = F_{2, y} - F_{1, y} = T \left( \dif{y}{x} \left[ x_{1} \right] - \dif{y}{x} \left[ x_{1} + \Delta x \right] \right)
+\end{align*}
+
+Newton's Second Law is
+
+\begin{align*}
+F = ma
+\end{align*}
+
+The mass of this small element of the string is given by
+
+\begin{align*}
+m = \mu \Delta x
+\end{align*}
+
+where $\mu$ is the mass per unit length.
+
+\begin{align*}
+F_{y} = \mu \Delta x \difn{y}{t}{2} &= T \left( \dif{y}{x} \left[ x_{1} \right] - \dif{y}{x} \left[ x_{1} + \Delta x \right] \right) \\
+\mu \difn{y}{t}{2} &= \frac{ T \left( \dif{y}{x} \left[ x_{1} \right] - \dif{y}{x} \left[ x_{1} + \Delta x \right] \right) }{\Delta x} 
+\end{align*}
+
+Take the limit of $\Delta x \rightarrow 0$
+
+\begin{align*}
+\mu \difn{y}{t}{2} &= T \difn{y}{x}{2} \\
+v &= \sqrt{\frac{T}{\mu}} \\
+\end{align*}
+
+\subsection*{Calculating how much energy is transmitted by a wave}
+\subsubsection*{Transfer of power}
+
+We know that waves transfer energy. It is useful to consider the power - the rate of energy transfer.
+
+Consider a wave travelling from left to right again.
+
+[Image]
+
+We need to find out how much force is being applied to the piece of string to the right of point A.
+
+\begin{align*}
+F_{y} &= -F_{x} \dif{y}{x} \\
+P &= F_{x} v \\
+P &= -F_{x} \dif{y}{x} \dif{y}{t}
+\end{align*}
+
+This is instantaneous power transfer at time t and position x. For a sinusoidal wave:
+
+\begin{align*}
+y &= A \cos(kx - \omega t) \\
+\dif{y}{x} &= -Ak \sin(kx - \omega t) \\
+\dif{y}{t} &= A \omega \sin (kx - \omega t) \\
+P(x, t) &= F_{x} A^{2} k \omega \sin^{2} (kx - \omega t)
+\end{align*}
+
+\end{document}
